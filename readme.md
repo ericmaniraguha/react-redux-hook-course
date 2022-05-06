@@ -29,6 +29,10 @@ Boostrap, react, redux
 2. Provider
 3. Dispatching Actions
 
-# Action creator - who has an action of desposit
+# task three Action creator - who has an action of desposit
 
 1. Action Creators
+
+# task four ---- account status
+
+1. implementing change account
