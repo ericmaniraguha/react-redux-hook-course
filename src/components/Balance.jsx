@@ -2,11 +2,14 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const Balance = () => {
-  const balanceStore = useSelector((state) => state);
-  console.log(balanceStore);
+  const balance = useSelector((state) => state.balance);
+
+  const store = useSelector((state) => state);
+  console.log('store', store);
+
   return (
     <div>
-      <h1>${balanceStore.balance}</h1>
+      <h1>${balance}</h1>
     </div>
   );
 };

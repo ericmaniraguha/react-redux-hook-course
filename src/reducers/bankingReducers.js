@@ -1,20 +1,27 @@
 const initialState = {
   balance: 0,
+  isSavingAccount: false,
 };
 
 export const bankingReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'DEPOSIT':
-      return { balance: state.balance + action.amount };
+      return { ...state, balance: state.balance + action.amount };
 
     case 'WITHDRAW':
-      return { balance: state.balance - action.amount };
+      return { ...state, balance: state.balance - action.amount };
 
     case 'COLLECT_INTEREST':
-      return { balance: state.balance * 1.08 };
+      return { ...state, balance: state.balance * 1.08 };
 
     case 'DELETE_ACCOUNT':
-      return { balance: 0 };
+      return { ...state, balance: 0 };
+
+    case 'TOGGLE_ACCOUNT':
+      return {
+        ...state,
+        isSavingAccount: !state.isSavingAccount,
+      };
 
     default:
       return state;

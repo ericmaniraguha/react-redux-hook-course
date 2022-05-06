@@ -5,6 +5,7 @@ import {
   withdraw,
   collectInterest,
   deleteAccount,
+  toggleAccount,
 } from '../actions/bankingActions';
 
 const Banking = () => {
@@ -23,7 +24,9 @@ const Banking = () => {
   const handleDelete = () => {
     dispatch(deleteAccount());
   };
-  const handleAccountChange = () => {};
+  const handleAccountChange = () => {
+    dispatch(toggleAccount());
+  };
 
   return (
     <div className='form-group'>
