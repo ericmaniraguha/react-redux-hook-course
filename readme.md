@@ -22,3 +22,10 @@ Boostrap, react, redux
 5.Configuring Redux Store
 6.Defining Actions
 7.Reducer
+
+# task two --- done with:( deposit, withdraw,collectInterest, and input value)
+
+1. Reducer
+2. Provider
+3. Dispatching Actions
+4. Action Creators
