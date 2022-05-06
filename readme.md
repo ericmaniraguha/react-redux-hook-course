@@ -28,4 +28,7 @@ Boostrap, react, redux
 1. Reducer
 2. Provider
 3. Dispatching Actions
-4. Action Creators
+
+# Action creator - who has an action of desposit
+
+1. Action Creators

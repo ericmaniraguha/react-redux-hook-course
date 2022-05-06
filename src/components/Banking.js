@@ -1,21 +1,27 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import {
+  deposit,
+  withdraw,
+  collectInterest,
+  deleteAccount,
+} from '../actions/bankingActions';
 
 const Banking = () => {
   const [amount, setAmount] = useState('');
   const dispatch = useDispatch();
 
   const handleDeposit = () => {
-    dispatch({ type: 'DEPOSIT', amount: parseInt(amount) });
+    dispatch(deposit(amount));
   };
   const handleWithdraw = () => {
-    dispatch({ type: 'WITHDRAW', amount: parseInt(amount) });
+    dispatch(withdraw(amount));
   };
   const handleCollectInterest = () => {
-    dispatch({ type: 'COLLECT_INTEREST' });
+    dispatch(collectInterest());
   };
   const handleDelete = () => {
-    dispatch({ type: 'DELETE' });
+    dispatch(deleteAccount());
   };
   const handleAccountChange = () => {};
 
@@ -47,28 +53,3 @@ const Banking = () => {
 };
 
 export default Banking;
-
-//actions
-
-//deposit
-
-const deposit = {
-  type: 'DEPOSIT',
-  amount: 150,
-};
-
-//Withdraw
-const withdraw = {
-  type: 'WITHDRAW',
-  amount: 50,
-};
-
-//collect interest
-const collectInterest = {
-  type: 'COLLECT_INTEREST',
-};
-
-//delete account
-const deleteAccount = {
-  type: 'DELETE_ACCOUNT',
-};
